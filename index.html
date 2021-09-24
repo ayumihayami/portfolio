@@ -9,68 +9,81 @@
     <title>日本システムプロデュース</title>
     <link rel="stylesheet" href="./css/destyle.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Poppins:wght@100;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Poppins:wght@100;400;700&display=swap">
 </head>
 <body>
     <header>
         <div id="headerContainer">
             <nav>
                 <h1><a href="">日本システムプロデュース</a></h1>
-                <ul id="dropMenu">
+                <ul>
                     <li><a href="">TOP</a></li>
                     <li><a href="">お知らせ</a></li>
-                    <li>
-                        <a class="dropTitle" href="">事業紹介</a>
-                        <ul class="dropDown">
-                            <li>
-                                <span>BUSINESS</span>
-                            </li>
-                            <li>
-                                <span>システム開発事業</span>
-                                <img src="./image/システム画像１.jpeg" alt="System"/>
-                            </li>
-                            <li>
-                                <span>美容事業</span>
-                                <img src="./image/美容画像１.jpeg" alt="Beauty"/>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li><a href="">ーリラクゼーションサロン</a></li>
-                                    <li><a href="">ーエステティックサロン</a></li>
-                                    <li><a href="">ーネイルサロン</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li class="dropMenu">
+                        <a class="dropHeading" href="">事業紹介</a>
+                        <div class="dropDisplay">
+                            <ul class="dropDown">
+                                <li>
+                                    <span class="dropTitle">BUSINESS</span>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span>システム開発事業</span>
+                                        <img src="./image/4786805_l 2.jpg" alt="System"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span>美容事業</span>
+                                        <img src="./image/beauty1.jpeg" alt="Beauty"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="">リラクゼーション事業</a></li>
+                                        <li><a href="">エステティック事業</a></li>
+                                        <li><a href="">ネイルサービス事業</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li><a href="">会社概要</a></li>
-                    <li>
-                        <a class="dropTitle" href="">採用情報</a>
-                        <ul class="dropDown">
-                            <li>
-                                <span>RECRUIT</span>
-                            </li>
-                            <li>
-                                <span>システム開発事業</span>
-                                <img src="./image/4786805_l.jpg" alt="System"/>
-                            </li>
-                            <li>
-                                <span>美容事業</span>
-                                <img src="./image/美容画像１.jpeg" alt="Beauty"/>
-                            </li>
-                            <li>
-                                <ul>
-                                    <li><a href="">ーリラクゼーションサロン</a></li>
-                                    <li><a href="">ーエステティックサロン</a></li>
-                                    <li><a href="">ーネイルサロン</a></li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li class="dropMenu">
+                        <a class="dropHeading" href="">採用情報</a>
+                        <div class="dropDisplay">
+                            <ul class="dropDown">
+                                <li>
+                                    <span class="dropTitle">RECRUIT</span>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span>システム開発事業</span>
+                                        <img src="./image/4786805_l 2.jpg" alt="System"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span>美容事業</span>
+                                        <img src="./image/beauty1.jpeg" alt="System"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li><a href="">リラクゼーションサロン</a></li>
+                                        <li><a href="">エステティックサロン</a></li>
+                                        <li><a href="">ネイルサロン</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
-                    <li><a href="">お問い合わせ</a></li>
+                    <li id="navContact"><a href="">お問い合わせ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <main>
         <section id="mainVisual">
             <article id="mainImage">
@@ -96,11 +109,18 @@
                         <span id="newsTopBack">NEWS</span>
                     </article>
                     <article id="newsContents">
-
+                        <dl>
+                            <dt>20XX年XX月XX日</dt>
+                            <dd><a href="">テキストテキスト</a></dd>
+                            <dt>20XX年XX月XX日</dt>
+                            <dd><a href="">テキストテキスト</a></dd>
+                            <dt>20XX年XX月XX日</dt>
+                            <dd><a href="">テキストテキスト</a></dd>
+                        </dl>
                     </article>
                 </article>
                 <article id="newsImage">
-                    <img src="./image/4782339_s.jpg" alt="news"/>
+                    <img src="./image/418037_m.jpg" alt="news"/>
                 </article>
             </section>
 
@@ -122,7 +142,7 @@
                     <article id="businessBeauty">
                         <a href="">
                             <h3>Beauty</h3>
-                            <img src="./image/美容画像１.jpeg" alt="Beauty"/>
+                            <img src="./image/beauty1.jpg" alt="Beauty"/>
                         </a>
                     </article>
                 </article>
@@ -140,12 +160,12 @@
                     <article id="aboutProfile">
                         <a href="">
                             <h3>会社概要</h3>
-                            <img src="./image/22006587_s.jpg" alt="profile"/>
+                            <img src="./image/22263611_m.jpg" alt="profile"/>
                         </a>
                     </article>
                     <article id="aboutRecruit">
                         <h3>採用情報</h3>
-                        <img  src="./image/4506344_s.jpg" alt="recruit"/>
+                        <img  src="./image/4506344_l.jpg" alt="recruit"/>
                         <article id="recruitBox">
                             <span id="recruitSystem"><a href="">システム開発事業</a></span>
                             <span id="recruitBeauty"><a href="">美容事業</a></span>
@@ -158,7 +178,7 @@
                 <article id="contactBox">
                     <article id="contactTop">
                         <h2>CONTACT</h2>
-                        <p>お問い合わせは、右記フォームからお願いいたします。</p>
+                        <p>お問い合わせは、右記フォームからお願い致します。</p>
                     </article>
                     <a href="">お問い合わせ</a>
                 </article>
