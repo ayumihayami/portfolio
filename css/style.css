@@ -123,34 +123,119 @@ header #headerContainer nav ul li:first-child a {
   padding-bottom: 30px;
 }
 
-header #headerContainer nav ul li:last-child {
+header #headerContainer nav ul #navContact {
   margin-right: 0;
   font-size: 12px;
   color: #FFFFFF;
 }
 
-header #headerContainer nav ul li:last-child a {
+header #headerContainer nav ul #navContact a {
   padding: 10px 40px;
   background-color: #575757;
 }
 
-header #headerContainer nav ul li:last-child a:visited {
+header #headerContainer nav ul #navContact a:visited {
   color: #FFFFFF;
 }
 
-header #headerContainer nav ul li:last-child a:hover {
+header #headerContainer nav ul #navContact a:hover {
   opacity: 0.9;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-bottom: none;
 }
 
-header #headerContainer nav .dropTitle:hover {
+header #headerContainer .dropHeading:hover {
   cursor: default;
 }
 
-header #headerContainer nav .dropDown {
+header #headerContainer .dropDisplay {
   display: none;
+}
+
+header #headerContainer .dropDown {
+  background-color: #FFFFFF;
+  width: 80%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+}
+
+header #headerContainer .dropDown li {
+  width: 23%;
+  height: 180px;
+  margin-top: 40px;
+  margin-right: 0;
+  text-align: center;
+}
+
+header #headerContainer .dropDown li .dropTitle {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+header #headerContainer .dropDown li a:hover {
+  border-bottom: none;
+  opacity: 0.8;
+}
+
+header #headerContainer .dropDown li a span {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+header #headerContainer .dropDown li a img {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 65%;
+     object-position: 65%;
+}
+
+header #headerContainer .dropDown li ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 65px;
+}
+
+header #headerContainer .dropDown li ul li {
+  height: 50px;
+  width: 100%;
+  margin-top: 0;
+  text-align: left;
+  position: relative;
+}
+
+header #headerContainer .dropDown li ul li::before {
+  border-top: 1px solid #B23838;
+  position: absolute;
+  top: 15%;
+  content: "";
+  width: 10px;
+}
+
+header #headerContainer .dropDown li ul li a {
+  font-weight: 400;
+  padding: 0 20px;
+  color: #B23838;
+  background-color: #FFFFFF;
+  border-bottom: none;
 }
 
 #mainVisual #mainImage {
@@ -191,6 +276,8 @@ header #headerContainer nav .dropDown {
 #mainVisual #mainImage img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 70%;
+     object-position: 70%;
   width: 100%;
   height: 100%;
 }
@@ -206,7 +293,7 @@ header #headerContainer nav .dropDown {
           flex-direction: row-reverse;
   z-index: 2;
   top: 20%;
-  left: 78%;
+  left: 75%;
   pointer-events: none;
 }
 
@@ -350,6 +437,7 @@ header #headerContainer nav .dropDown {
 }
 
 #news #newsBox #newsTop #newsTopInner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,14 +447,13 @@ header #headerContainer nav .dropDown {
   color: #B23838;
   font-weight: 700;
   z-index: 2;
-  position: relative;
 }
 
 #news #newsBox #newsTop #newsTopInner span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 112px;
 }
 
@@ -390,7 +477,7 @@ header #headerContainer nav .dropDown {
 
 #news #newsBox #newsTop #newsTopInner h2 {
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.15em;
 }
 
@@ -452,12 +539,43 @@ header #headerContainer nav .dropDown {
 }
 
 #news #newsBox #newsContents {
-  height: 250px;
+  height: 270px;
+  padding-top: 50px;
+}
+
+#news #newsBox #newsContents dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 403px;
+  margin: 0 auto;
+}
+
+#news #newsBox #newsContents dl dt, #news #newsBox #newsContents dl dd {
+  padding: 25px;
+  border-bottom: 1px solid rgba(87, 87, 87, 0.35);
+}
+
+#news #newsBox #newsContents dl dt:last-of-type, #news #newsBox #newsContents dl dd:last-of-type {
+  border-bottom: none;
+}
+
+#news #newsBox #newsContents dl dt {
+  width: 40%;
+}
+
+#news #newsBox #newsContents dl dd {
+  width: 60%;
+}
+
+#news #newsBox #newsContents dl dd a:hover {
+  color: #B23838;
 }
 
 #news #newsImage {
   width: 45%;
-  height: auto;
   position: absolute;
   right: 0;
 }
@@ -492,7 +610,7 @@ header #headerContainer nav .dropDown {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 112px;
 }
 
@@ -516,7 +634,7 @@ header #headerContainer nav .dropDown {
 
 #business #businessTop #businessTopInner h2 {
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.15em;
 }
 
@@ -544,49 +662,53 @@ header #headerContainer nav .dropDown {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 -75px;
   height: 450px;
 }
 
-#business #businessBox #businessSystem, #business #businessBox #businessBeauty {
-  width: 50%;
+#business #businessBox #businessSystem,
+#business #businessBox #businessBeauty {
+  width: 49.9%;
   position: relative;
 }
 
-#business #businessBox #businessSystem a, #business #businessBox #businessBeauty a {
+#business #businessBox #businessSystem a,
+#business #businessBox #businessBeauty a {
   display: block;
   height: 100%;
   background-color: #575757;
 }
 
-#business #businessBox #businessSystem a:hover, #business #businessBox #businessBeauty a:hover {
+#business #businessBox #businessSystem a:hover,
+#business #businessBox #businessBeauty a:hover {
   background-color: #B23838;
 }
 
-#business #businessBox #businessSystem a h3, #business #businessBox #businessBeauty a h3 {
+#business #businessBox #businessSystem a h3,
+#business #businessBox #businessBeauty a h3 {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 18px;
+  font-size: 20px;
   color: #FFFFFF;
-  z-index: 3;
 }
 
-#business #businessBox #businessSystem a img, #business #businessBox #businessBeauty a img {
+#business #businessBox #businessSystem a img,
+#business #businessBox #businessBeauty a img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.75;
 }
 
-#business #businessBox #businessSystem a img:hover, #business #businessBox #businessBeauty a img:hover {
+#business #businessBox #businessSystem a img:hover,
+#business #businessBox #businessBeauty a img:hover {
   opacity: 0.2;
 }
 
-#business #businessBox #businessSystem h3, #business #businessBox #businessBeauty h3 {
+#business #businessBox #businessSystem h3,
+#business #businessBox #businessBeauty h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
@@ -620,7 +742,7 @@ header #headerContainer nav .dropDown {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 112px;
 }
 
@@ -644,7 +766,7 @@ header #headerContainer nav .dropDown {
 
 #about #aboutTop #aboutTopInner h2 {
   font-size: 30px;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.15em;
 }
 
@@ -672,6 +794,8 @@ header #headerContainer nav .dropDown {
 
 #about #aboutBox #aboutProfile,
 #about #aboutBox #aboutRecruit {
+  max-width: 1275px;
+  margin: 0 auto;
   height: 300px;
   position: relative;
 }
@@ -695,9 +819,8 @@ header #headerContainer nav .dropDown {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 18px;
+  font-size: 20px;
   color: #FFFFFF;
-  z-index: 3;
 }
 
 #about #aboutBox #aboutProfile a img,
@@ -706,7 +829,6 @@ header #headerContainer nav .dropDown {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.75;
 }
 
 #about #aboutBox #aboutProfile a img:hover,
@@ -720,8 +842,8 @@ header #headerContainer nav .dropDown {
 }
 
 #about #aboutBox #aboutProfile a img {
-  -o-object-position: 50% 69%;
-     object-position: 50% 69%;
+  -o-object-position: 50% 68%;
+     object-position: 50% 68%;
 }
 
 #about #aboutBox #aboutRecruit {
@@ -745,8 +867,8 @@ header #headerContainer nav .dropDown {
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.75;
-  -o-object-position: 50% 75%;
-     object-position: 50% 75%;
+  -o-object-position: 50% 95%;
+     object-position: 50% 95%;
 }
 
 #about #aboutBox #aboutRecruit #recruitBox {
@@ -839,11 +961,12 @@ header #headerContainer nav .dropDown {
   opacity: 0.8;
 }
 
-footer #footerContainer {
+#footerContainer {
   margin: 55px 75px 0;
+  font-weight: 700;
 }
 
-footer #sitemap {
+#sitemap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -852,12 +975,12 @@ footer #sitemap {
           justify-content: space-between;
 }
 
-footer #sitemap #mapList {
+#sitemap #mapList {
   width: 65%;
   color: #B23838;
 }
 
-footer #sitemap #mapList #mapBox {
+#sitemap #mapList #mapBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -866,34 +989,39 @@ footer #sitemap #mapList #mapBox {
           justify-content: space-between;
 }
 
-footer #sitemap #mapList #mapBox .mapCategory span {
+#sitemap #mapList #mapBox a:hover {
+  opacity: 0.8;
+}
+
+#sitemap #mapList #mapBox .mapCategory span {
   display: inline-block;
   margin-bottom: 20px;
   font-size: 13px;
   pointer-events: none;
 }
 
-footer #sitemap #mapList #mapBox .mapCategory .mapLink {
+#sitemap #mapList #mapBox .mapCategory .mapLink {
   padding-left: 18px;
   border-left: 1px solid rgba(87, 87, 87, 0.35);
   font-size: 12px;
 }
 
-footer #sitemap #mapList #mapBox .mapCategory .mapLink li {
+#sitemap #mapList #mapBox .mapCategory .mapLink li {
   margin-bottom: 15px;
 }
 
-footer #sitemap #mapList #mapBox .mapCategory #mapContents li {
+#sitemap #mapList #mapBox .mapCategory #mapContents li {
   font-size: 13px;
   margin-bottom: 20px;
 }
 
-footer #sitemap #mapList #mapBox .mapCategory #mapContents li:last-child {
+#sitemap #mapList #mapBox .mapCategory #mapContents li:last-child {
   font-size: 11px;
 }
 
-footer #copyright {
+#copyright {
   margin: 57px -75px 0;
+  font-weight: 400;
   background-color: #575757;
   height: 38px;
   display: -webkit-box;
@@ -904,7 +1032,7 @@ footer #copyright {
           justify-content: center;
 }
 
-footer #copyright span {
+#copyright span {
   color: #FFFFFF;
   font-size: 10px;
   opacity: 0.55;
