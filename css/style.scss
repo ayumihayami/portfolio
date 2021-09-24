@@ -392,15 +392,6 @@ header {
             }
         }
 
-        #newsImage {
-            width: 45%;
-            position: absolute;
-            right: 0;
-            img {
-                width: 100%;
-            }
-        }
-
         #newsContents {
             height: 270px;
             padding-top: 50px;
@@ -428,6 +419,15 @@ header {
                     }
                 }
             }
+        }
+    }
+    
+    #newsImage {
+        width: 45%;
+        position: absolute;
+        right: 0;
+        img {
+            width: 100%;
         }
     }
 }

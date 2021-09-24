@@ -570,9 +570,12 @@ header #headerContainer .dropDown li ul li a {
   width: 60%;
 }
 
+#news #newsBox #newsContents dl dd a:hover {
+  color: #B23838;
+}
+
 #news #newsImage {
   width: 45%;
-  height: auto;
   position: absolute;
   right: 0;
 }
